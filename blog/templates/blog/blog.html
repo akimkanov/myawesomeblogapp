@@ -137,7 +137,7 @@
       <h1 class="py-4 pb-5">Recent Posts</h1>
 
       {% for post in posts.all %}
-      <h2>{{post.blog_title}}</h2>
+      <a href=""><h2>{{post.blog_title}}</h2></a>
       <img
         src="{{post.blog_image.url}}"
         height="300"
@@ -145,7 +145,7 @@
         class="img-fluid"
       />
       <br />
-      <p>{{post.blog_text}}</p>
+      <p>{{post.get_summary}}</p>
       {{post.blog_date}}
       <br />
       <br />
